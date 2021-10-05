@@ -1,0 +1,68 @@
+
+.eventBoard .container{
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.eventBoard .container .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+.eventBoard .container h4{
+    font-weight: 700;
+}
+.eventBoard .container h4,.eventBoard .container h5{
+    font-size:18px;
+    margin: 5px 0;
+}
+
+.eventBoard .container p{
+    font-size:16px;
+    margin: 5px 0;
+    transition:all 0.5s ease;
+}
+.eventBoard .events div:hover p{
+    transform:translateY(5px);
+}
+
+.eventBoard .container .seeAll{
+    display: flex;
+    align-items: center;
+    
+}
+.eventBoard .container .seeAll .rightarrow{
+    transition: all 0.5s ease;
+    
+ }
+.eventBoard .container .seeAll:hover .rightarrow{
+   transform: translateX(5px);
+}
+
+.eventBoard .container .title >h2{
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.eventBoard .container .title >a{
+    font-size: 18px;
+
+}
+.eventBoard .events{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.eventBoard .events>div{
+    flex:1;
+    margin: 0 10px;
+}
+
+.eventBoard .events .img{
+    margin:10px 0;
+    padding:100% 0 0 0; 
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
