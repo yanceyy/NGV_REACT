@@ -7,12 +7,18 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import Footer from '../footer';
 
+const FooterForHeader = ReactDOM.createPortal(
+  <div className="footerForHeader"><Footer /></div>, document.getElementById('root') as Element,
+);
 export default function Header() {
   const [showLanguagePanel, setShowLanguagePanel] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
+  const [showMenu, setMenu] = useState<boolean>(false);
   return (
-    <header className="header">
+    <header className={`${showMenu ? 'act' : ''} header`}>
       <div className="insider">
         <Link to="/" className="logo">CGC</Link>
         <nav className="header_nav">
@@ -39,7 +45,19 @@ export default function Header() {
               showSearch ? <KeyboardArrowDownIcon /> : <SearchIcon />
             }
           </span>
-          <span><MenuIcon /></span>
+          <span onClick={() => {
+            setMenu(!showMenu);
+            const ngvmune = document.querySelector('.footerForHeader .footer') as HTMLElement;
+            if (!showMenu) {
+              ngvmune.style.height = '100%';
+            } else {
+              ngvmune.style.height = '0';
+            }
+          }}
+          >
+            <MenuIcon />
+
+          </span>
         </div>
       </div>
       {showSearch
@@ -61,6 +79,7 @@ export default function Header() {
           <li><a href="/">日本語</a></li>
         </ul>
       </div>
+      {FooterForHeader}
     </header>
   );
 }

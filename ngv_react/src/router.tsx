@@ -9,8 +9,8 @@ export default function RouterComponent() {
     <>
       <Switch>
         <Route exact path="/"><Home /></Route>
-        <Route exact path="/channel"><Channel /></Route>
-        <Route exact path="/whats-on"><WhatsOn /></Route>
+        <Route path="/channel"><Channel /></Route>
+        <Route path="/whats-on"><WhatsOn /></Route>
         <Redirect to="/" />
       </Switch>
     </>
