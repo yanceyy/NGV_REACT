@@ -51,12 +51,12 @@
 }
 .eventBoard .events{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .eventBoard .events>div{
-    flex:1;
-    margin: 0 10px;
+    width:25%;
+    padding: 0 10px;
 }
 
 .eventBoard .events .img{
@@ -65,4 +65,5 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size:cover;
+    background-position: 50% 50%;
 }

@@ -6,6 +6,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Footer from '../footer';
@@ -55,7 +56,7 @@ export default function Header() {
             }
           }}
           >
-            <MenuIcon />
+            {showMenu ? <CloseIcon /> : <MenuIcon />}
 
           </span>
         </div>
