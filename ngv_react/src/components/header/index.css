@@ -14,7 +14,7 @@
 
 .insider{
     height: 72px;
-    padding: 0 75px;
+    padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,7 +78,7 @@
 .header_nav{
     flex:1;
     display: flex;
-    margin: 0 123px;
+    margin: 0 5%;
     justify-content: space-between;
     text-transform: uppercase;
 }
@@ -89,6 +89,10 @@
     cursor: pointer;
     font-size:18px;
 }
+
+
+
+
 .header_nav span:hover{
     opacity: 0.6;
     
@@ -124,4 +128,26 @@
 }
 .languagepanel ul>li>a{
     color: white;
+}
+
+@media all and (max-width:1300px) {
+    .header_nav span{ 
+        font-size:13px;
+    }
+}
+
+@media all and (max-width:950px) {
+    .footerForHeader .footer{
+        top:70px;
+    }
+    .header_nav span{ 
+        display:none;
+    }
+    .header .searchbar{ 
+        right: 15px;
+       }
+
+       .languagepanel{ 
+        padding: 0 30px;
+    }
 }

@@ -47,17 +47,28 @@
 }
 .eventBoard .container .title >a{
     font-size: 18px;
-
 }
 .eventBoard .events{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .eventBoard .events>div{
     width:25%;
     padding: 0 10px;
 }
+
+@media all and (max-width:950px) {
+    .eventBoard .container .title >h2{
+        font-size: 18px;
+    }
+    .eventBoard .events>div{
+        width:70%;
+        padding: 0 10px;
+    }
+}
+
 
 .eventBoard .events .img{
     margin:10px 0;

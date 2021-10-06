@@ -1,7 +1,7 @@
 import React from 'react';
 import Gallery from '../../components/gallery';
 import Footer from '../../components/footer';
-import Announement from '../../components/announcement';
+// import Announement from '../../components/announcement';
 import EventBoard from '../../components/eventBoard';
 import ExhibitionsBoard from '../../components/exhibitionBoard';
 import RdBoard from '../../components/rdBoard';
@@ -13,7 +13,7 @@ const IMGurl = [
   {
     url: 'https://www.ngv.vic.gov.au/wp-content/uploads/2021/10/homeslide_argenteuil-v2.jpg',
     title: 'FREE SHIPPING australia-wide',
-    text: 'When you spend $50 online at WMW design store. Available until 11:59pm AEDT, 4 Oct',
+    text: 'When you spend $50 online at VGN design store. Available until 11:59pm AEDT, 4 Oct',
     id: '1',
   },
   {
@@ -24,7 +24,7 @@ const IMGurl = [
   },
   {
     url: 'https://www.ngv.vic.gov.au/wp-content/uploads/2021/10/homeslide_design-store-v2.jpg',
-    title: 'WMW Channel',
+    title: 'VGN Channel',
     text: 'Watch | Read | Listen | Explore',
     id: '3',
   },
@@ -40,7 +40,7 @@ const content = {
 
 const content1 = {
   imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/Fd104985/1280',
-  title: 'Discover the NGV Collection',
+  title: 'Discover the VGN Collection',
   content: 'View highlights and recent acquisitions, events, publications, research and more.',
   linkname: 'Browse 68,000+ works online',
   link: '/',
@@ -73,14 +73,14 @@ const events = [
   },
 ];
 export default function Home() {
-  useDocumentTitle('NGV', false);
+  useDocumentTitle('VGN', false);
   return (
     <>
       <div className="maximumbody">
         <Head />
         <Gallery IMGurl={IMGurl} />
         <div className="homePageContent">
-          <Announement />
+          {/* <Announement /> */}
           <RdBoard item={content} />
           <EventBoard items={events} />
           <RdBoard item={content1} />

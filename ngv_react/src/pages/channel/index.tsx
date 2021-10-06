@@ -8,7 +8,7 @@ import RdBoard from '../../components/rdBoard';
 
 const content = {
   title: 'CHANNEL',
-  text: 'Stay connected and inspired with highlights from the NGV including the stories behind our Collection works and exhibitions, virtual tours, essays, interviews and more.',
+  text: 'Stay connected and inspired with highlights from the VGN including the stories behind our Collection works and exhibitions, virtual tours, essays, interviews and more.',
 };
 
 const content1 = {

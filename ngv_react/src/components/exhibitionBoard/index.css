@@ -52,7 +52,6 @@
 .exhibitions .events{
     display: flex;
     flex-wrap: nowrap;
-
 }
 .exhibitions .events>div{
     flex:1;
@@ -74,4 +73,24 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size:cover;
+}
+
+@media all and (max-width:950px) {
+    .exhibitions .events{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .exhibitions .events>div{
+        width:100%;
+        margin-bottom:10px;
+    }
+    .exhibitions .events .inf{
+        height: auto;
+        padding: 20px;
+    }
+    .exhibitions .events .img{
+        margin-bottom: 10px;
+        height: 300px;
+        width: 100%;
+    }
 }

@@ -59,3 +59,26 @@
     text-transform: uppercase;
 }
 
+@media all and (max-width:950px) {
+    .gallery img{
+        height:300px;
+        object-fit: cover;
+    }
+
+    .gallery .info{
+        position: absolute;
+        bottom: -100%;
+        left:30px;
+        padding:12px;
+        max-width:220px;
+    }
+    .gallery .info h3{ 
+        font-size:22px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .gallery ul.fastchange{ 
+        bottom:20px;
+        right: 35px;
+    }
+}

@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className={`${showMenu ? 'act' : ''} header`}>
       <div className="insider">
-        <Link to="/" className="logo">CGC</Link>
+        <Link to="/" className="logo">VGN</Link>
         <nav className="header_nav">
           <span><Link to="/tickets">Tickets</Link></span>
           <span><Link to="/channel">channel</Link></span>

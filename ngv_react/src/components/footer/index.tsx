@@ -17,7 +17,7 @@ const footerContent:NavItem[] = [
   },
   {
     name: 'channel',
-    url: '/ticket',
+    url: '/channel',
     submenu: [
       {
         name: 'read',
@@ -36,14 +36,14 @@ const footerContent:NavItem[] = [
         url: '/read',
       },
       {
-        name: 'ngv Magazine',
+        name: 'vgn Magazine',
         url: '/read',
       },
     ],
   },
   {
     name: 'What on',
-    url: '/ticket',
+    url: '/whats-on',
     submenu: [
       {
         name: 'Tickets',
@@ -65,7 +65,7 @@ const footerContent:NavItem[] = [
   },
   {
     name: 'collection',
-    url: '/ticket',
+    url: '/collection',
     submenu: [
       {
         name: 'curatorial departments',
@@ -91,7 +91,7 @@ const footerContent:NavItem[] = [
   },
   {
     name: 'LEARN',
-    url: '/ticket',
+    url: '/learn',
     submenu: [
       {
         name: 'Kids',
@@ -102,7 +102,7 @@ const footerContent:NavItem[] = [
         url: '/read',
       },
       {
-        name: 'NGV School and Community Support Programs',
+        name: 'VGN School and Community Support Programs',
         url: '/read',
       },
       {
@@ -118,7 +118,7 @@ const footerContent:NavItem[] = [
         url: '/read',
       },
       {
-        name: 'NGV Online Courses',
+        name: 'VGN Online Courses',
         url: '/read',
       },
     ],
@@ -128,18 +128,18 @@ const footerContent:NavItem[] = [
     url: '/shop',
     submenu: [
       {
-        name: 'NGV design store',
+        name: 'VGN design store',
         url: '/read',
       },
       {
-        name: 'NGV design store locations',
+        name: 'VGN design store locations',
         url: '/read',
       },
     ],
   },
   {
     name: 'PLAN YOUR visit',
-    url: '/ticket',
+    url: '/plan-your-visit',
     submenu: [
       {
         name: 'Tickets',
@@ -169,7 +169,7 @@ const footerContent:NavItem[] = [
   },
   {
     name: 'About',
-    url: '/ticket',
+    url: '/about',
     submenu: [
       {
         name: 'contact',
@@ -203,7 +203,7 @@ const footerContent:NavItem[] = [
   },
   {
     name: 'membership',
-    url: '/ticket',
+    url: '/membership',
     submenu: [
       {
         name: 'join',
@@ -226,7 +226,7 @@ const footerContent:NavItem[] = [
         url: '/read',
       },
       {
-        name: 'what\'s on for NGV Members',
+        name: 'what\'s on for VGN Members',
         url: '/read',
       },
       {
@@ -245,7 +245,7 @@ const footerContent:NavItem[] = [
   },
   {
     name: 'support us',
-    url: '/ticket',
+    url: '/support-us',
     submenu: [
       {
         name: '2021 annual appeal',
@@ -264,14 +264,14 @@ const footerContent:NavItem[] = [
         url: '/read',
       },
       {
-        name: 'NGVWA',
+        name: 'VGNWA',
         url: '/read',
       },
     ],
   },
   {
     name: 'contact',
-    url: '/ticket',
+    url: '/contact',
     submenu: [
       {
         name: 'contact us',
@@ -295,7 +295,7 @@ export default function Footer() {
         {footerContent.map((item) => (
           <div className="item">
             <h5><a href={item.url}>{item.name}</a></h5>
-            <ul>
+            <ul className="subitem">
               {item.submenu.map((subItem) => <li><a href={subItem.url}>{subItem.name}</a></li>)}
             </ul>
           </div>

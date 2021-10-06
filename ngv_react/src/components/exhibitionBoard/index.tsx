@@ -18,13 +18,13 @@ const data = [
   {
     url: 'https://www.ngv.vic.gov.au/wp-content/uploads/2020/04/ARTS024531-det.jpg',
     title: 'BIG WEATHER',
-    subtitle: 'NGV COLLECTION',
+    subtitle: 'VGN COLLECTION',
     time: 'Until 6 Feb',
   },
   {
     url: 'https://content.ngv.vic.gov.au/col-images/api/Dm100205/1280',
     title: 'WE CHANGE THE WORLD',
-    subtitle: 'NGV COLLECTION',
+    subtitle: 'VGN COLLECTION',
     time: 'Until 27 Mar',
   },
 ];
@@ -51,7 +51,6 @@ export default function ExhibitionsBoard() {
                 <h5>{item.subtitle}</h5>
                 <p>{item.time}</p>
               </div>
-
             </div>
           ))}
         </a>

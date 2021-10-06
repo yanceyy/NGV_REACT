@@ -5,9 +5,9 @@ export default function Announement() {
   return (
     <div className="announement">
       <div className="container">
-        <h3>NGV TEMPORARY CLOSURE</h3>
+        <h3>VGN TEMPORARY CLOSURE</h3>
         <p>
-          Following the latest advice from the Victorian Government, the NGV is
+          Following the latest advice from the Victorian Government, the VGN is
           temporarily closed to the public.
           Please keep following our social media for updates and daily stories.
           For all visitors with tickets that are affected by the closure, your tickets
