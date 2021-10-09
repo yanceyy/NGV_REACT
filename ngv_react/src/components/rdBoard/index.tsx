@@ -16,6 +16,7 @@ export default function RdBoard({ item }:{item:Content}) {
       <div className="conatiner">
         <img src={item.imgUrl} alt="" />
         <a href={item.link} className="info">
+
           <h3>{item.title}</h3>
           <p>
             {item.content}
@@ -24,6 +25,7 @@ export default function RdBoard({ item }:{item:Content}) {
             {item.linkname}
             <KeyboardArrowRightIcon className="rightarrow" />
           </span>
+
         </a>
       </div>
     </div>

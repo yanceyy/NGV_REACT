@@ -11,9 +11,6 @@ import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Footer from '../footer';
 
-const FooterForHeader = ReactDOM.createPortal(
-  <div className="footerForHeader"><Footer /></div>, document.getElementById('root') as Element,
-);
 export default function Header() {
   const [showLanguagePanel, setShowLanguagePanel] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
@@ -33,7 +30,7 @@ export default function Header() {
           <span><Link to="/membership">join</Link></span>
         </nav>
         <div className="rightNgv">
-          <span className="changelanguage" onClick={() => { setShowLanguagePanel(!showLanguagePanel); }}>
+          <span className="changelanguage" title="language" onClick={() => { setShowLanguagePanel(!showLanguagePanel); }}>
             <LanguageIcon />
             EN
             {
@@ -46,15 +43,11 @@ export default function Header() {
               showSearch ? <KeyboardArrowDownIcon /> : <SearchIcon />
             }
           </span>
-          <span onClick={() => {
-            setMenu(!showMenu);
-            const ngvmune = document.querySelector('.footerForHeader .footer') as HTMLElement;
-            if (!showMenu) {
-              ngvmune.style.height = '100%';
-            } else {
-              ngvmune.style.height = '0';
-            }
-          }}
+          <span
+            title="menu"
+            onClick={() => {
+              setMenu(!showMenu);
+            }}
           >
             {showMenu ? <CloseIcon /> : <MenuIcon />}
 
@@ -80,7 +73,9 @@ export default function Header() {
           <li><a href="/">日本語</a></li>
         </ul>
       </div>
-      {FooterForHeader}
+      {showMenu ? ReactDOM.createPortal(
+        <div className="footerForHeader"><Footer /></div>, document.getElementById('root') as Element,
+      ) : undefined}
     </header>
   );
 }

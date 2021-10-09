@@ -15,6 +15,7 @@
     position:relative;
     visibility:visible;
     opacity:1;
+    transition:opacity 1s linear;
 }
 
 .gallery ul.fastchange{ 

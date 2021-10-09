@@ -38,7 +38,7 @@ export default function Gallery({ IMGurl }:GalleryImgUrlItems):ReactElement {
       {
         IMGurl.map((url, index) => (
           <div key={url.id} className={index === picIndex ? 'active' : undefined}>
-            <img src={url.url} alt="" />
+            <img alt={url.title} src={url.url} />
             <div className="info">
               <h3>
                 {url.title}

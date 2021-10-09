@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import { Link } from 'react-router-dom';
 
 interface Base{
   name: string,
@@ -25,19 +26,19 @@ const footerContent:NavItem[] = [
       },
       {
         name: 'watch',
-        url: '/read',
+        url: '/watch',
       },
       {
         name: 'publications',
-        url: '/read',
+        url: '/publications',
       },
       {
         name: 'art journal',
-        url: '/read',
+        url: '/aj',
       },
       {
         name: 'vgn Magazine',
-        url: '/read',
+        url: '/magazine',
       },
     ],
   },
@@ -47,19 +48,19 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: 'Tickets',
-        url: '/read',
+        url: '/tickets',
       },
       {
         name: 'Exhibitions',
-        url: '/read',
+        url: '/Exhibitions',
       },
       {
         name: 'Events',
-        url: '/read',
+        url: '/Events',
       },
       {
         name: 'Virtual Tours',
-        url: '/read',
+        url: '/virtual-Tours',
       },
     ],
   },
@@ -69,23 +70,23 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: 'curatorial departments',
-        url: '/read',
+        url: '/depart',
       },
       {
         name: 'conservation',
-        url: '/read',
+        url: '/conservation',
       },
       {
         name: 'provenance',
-        url: '/read',
+        url: '/provenance',
       },
       {
         name: 'Reproductions',
-        url: '/read',
+        url: '/Reproductions',
       },
       {
         name: 'Victorian Foundation for Living Australian Artists',
-        url: '/read',
+        url: '/foundation',
       },
     ],
   },
@@ -95,31 +96,31 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: 'Kids',
-        url: '/read',
+        url: '/kids',
       },
       {
         name: 'Teens',
-        url: '/read',
+        url: '/Teens',
       },
       {
         name: 'VGN School and Community Support Programs',
-        url: '/read',
+        url: '/school',
       },
       {
         name: 'Plan Your Visit',
-        url: '/read',
+        url: '/plan',
       },
       {
         name: 'Learning resources',
-        url: '/read',
+        url: '/resources',
       },
       {
         name: 'Top Arts Hub',
-        url: '/read',
+        url: '/arts-hubs',
       },
       {
         name: 'VGN Online Courses',
-        url: '/read',
+        url: '/online-courses',
       },
     ],
   },
@@ -129,11 +130,11 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: 'VGN design store',
-        url: '/read',
+        url: '/store',
       },
       {
         name: 'VGN design store locations',
-        url: '/read',
+        url: '/store-locations',
       },
     ],
   },
@@ -143,27 +144,27 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: 'Tickets',
-        url: '/read',
+        url: '/Tickets',
       },
       {
         name: 'Hours & Location',
-        url: '/read',
+        url: '/Hours',
       },
       {
         name: 'Dining',
-        url: '/read',
+        url: '/Dining',
       },
       {
         name: 'provate functions',
-        url: '/read',
+        url: '/provate',
       },
       {
         name: 'access',
-        url: '/read',
+        url: '/access',
       },
       {
         name: 'shaw research library',
-        url: '/read',
+        url: '/library',
       },
     ],
   },
@@ -173,31 +174,31 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: 'contact',
-        url: '/read',
+        url: '/contact',
       },
       {
         name: 'international audience engagement network (IAE)',
-        url: '/read',
+        url: '/audience',
       },
       {
         name: 'media',
-        url: '/read',
+        url: '/media',
       },
       {
         name: 'people & careers',
-        url: '/read',
+        url: '/careers',
       },
       {
         name: 'parners&supporters',
-        url: '/read',
+        url: '/supporters',
       },
       {
         name: 'reports & documents',
-        url: '/read',
+        url: '/documents',
       },
       {
         name: 'sustainablity',
-        url: '/read',
+        url: '/sustainablity',
       },
     ],
   },
@@ -207,39 +208,39 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: 'join',
-        url: '/read',
+        url: '/join',
       },
       {
         name: 'renew',
-        url: '/read',
+        url: '/renew',
       },
       {
         name: 'premium membership',
-        url: '/read',
+        url: '/membership',
       },
       {
         name: 'gift membership',
-        url: '/read',
+        url: '/gift',
       },
       {
         name: 'mamage account',
-        url: '/read',
+        url: '/account',
       },
       {
         name: 'what\'s on for VGN Members',
-        url: '/read',
+        url: '/Members',
       },
       {
         name: 'reciprocal benefits',
-        url: '/read',
+        url: '/benefits',
       },
       {
         name: 'FAQ',
-        url: '/read',
+        url: '/FAQ',
       },
       {
         name: 'Members Contact',
-        url: '/read',
+        url: '/Contact',
       },
     ],
   },
@@ -249,23 +250,23 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: '2021 annual appeal',
-        url: '/read',
+        url: '/appeal',
       },
       {
         name: 'individual donations',
-        url: '/read',
+        url: '/donations',
       },
       {
         name: 'become a corporate partner',
-        url: '/read',
+        url: '/partner',
       },
       {
         name: 'fundraising events',
-        url: '/read',
+        url: '/events',
       },
       {
         name: 'VGNWA',
-        url: '/read',
+        url: '/VGNWA',
       },
     ],
   },
@@ -275,15 +276,15 @@ const footerContent:NavItem[] = [
     submenu: [
       {
         name: 'contact us',
-        url: '/read',
+        url: '/contact',
       },
       {
-        name: 'subscribr to eNews',
-        url: '/read',
+        name: 'subscribe to eNews',
+        url: '/subscribr',
       },
       {
         name: 'mamage your enews subscription',
-        url: '/read',
+        url: '/mamage',
       },
     ],
   },
@@ -293,10 +294,14 @@ export default function Footer() {
     <div className="footer">
       <div className="container">
         {footerContent.map((item) => (
-          <div className="item">
-            <h5><a href={item.url}>{item.name}</a></h5>
+          <div className="item" key={item.url}>
+            <h5><Link to={item.url}>{item.name}</Link></h5>
             <ul className="subitem">
-              {item.submenu.map((subItem) => <li><a href={subItem.url}>{subItem.name}</a></li>)}
+              {item.submenu.map((subItem) => (
+                <li key={subItem.url}>
+                  <a href={subItem.url}>{subItem.name}</a>
+                </li>
+              ))}
             </ul>
           </div>
         ))}

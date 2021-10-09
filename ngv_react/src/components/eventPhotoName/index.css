@@ -1,0 +1,17 @@
+.event{
+    margin: 20px 5%;
+    width: 40%;
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.event > img{
+width: 250px;
+
+}
+
+.event > h5{
+    font-size:22px;
+    padding: 10px;
+}

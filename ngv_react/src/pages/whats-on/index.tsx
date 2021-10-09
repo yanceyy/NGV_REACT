@@ -4,6 +4,8 @@ import Footer from '../../components/footer';
 import { useDocumentTitle } from '../../utils';
 import EventBoard from '../../components/eventBoard';
 import PageTitle from '../../components/pagetitleBoar';
+import ExhibitionsBoard from '../../components/exhibitionBoard';
+import RdBoard from '../../components/rdBoard';
 
 const events = [
   {
@@ -55,14 +57,35 @@ const events = [
     time: '10.30am,6 Oct | Free',
   },
 ];
+
+const content3 = {
+  imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/EXHI061864/1280',
+  title: 'NGV SPOTIFY PLAYLISTS',
+  content: 'Wander through the Impressionist movement’s most dreamy, timeless and sublime pieces of music, from iconic early works through to contemporary forms from across the globe.',
+  linkname: 'Listen',
+  link: '/',
+};
+
+const content4 = {
+  imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/EXHI061868/1280',
+  title: 'Beyond the Frame',
+  content: 'Understand the bigger picture behind some of the world’s greatest art with Beyond the Frame, a six-part podcast series created by HSBC, Premium Partner of French Impressionism from the Museum of Fine Arts, Boston',
+  linkname: 'Listen',
+  link: '/',
+};
 export default function WhatsOn() {
-  useDocumentTitle('What\'s on', false);
+  useDocumentTitle('What\'s on|VGN', false);
   return (
     <>
       <div className="maximumbody">
         <Head />
         <PageTitle title="WHAT’S ON" />
         <EventBoard items={events} />
+        <RdBoard item={content3} />
+        <RdBoard item={content4} />
+        <ExhibitionsBoard />
+        <RdBoard item={content3} />
+        <RdBoard item={content4} />
         <div className="homePageContent" />
       </div>
       <Footer />

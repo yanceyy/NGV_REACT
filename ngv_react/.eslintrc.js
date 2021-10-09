@@ -25,6 +25,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'import/no-extraneous-dependencies': ['off', { devDependencies: ['**/*.test.tsx', '**/*.spec.tsx'] }],
     'import/extensions': [
       'error',
       'ignorePackages',

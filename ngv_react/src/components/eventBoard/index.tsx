@@ -15,7 +15,7 @@ export default function EventBoard({ items }:{items:Item[]}) {
       <div className="container">
         <div className="title">
           <h2>Virtual events</h2>
-          <a className="seeAll" href="sall">
+          <a className="seeAll" href="/whats-on">
             <span>
               See all events
             </span>

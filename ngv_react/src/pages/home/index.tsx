@@ -35,7 +35,7 @@ const content = {
   title: 'CHANNEL',
   content: 'Stay connected and inspired with highlights from the WMW including the stories behind our Collection works and exhibitions, virtual tours, essays, interviews and more.',
   linkname: 'Browse',
-  link: '/',
+  link: '/channel',
 };
 
 const content1 = {

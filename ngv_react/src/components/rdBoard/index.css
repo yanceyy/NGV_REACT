@@ -1,7 +1,7 @@
 .RdBoard .conatiner{
     height: 446px;
     max-width: 1360px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     flex-flow: row nowrap;
@@ -33,7 +33,7 @@
 
 .RdBoard .conatiner .info {
     height: 100%;
-    width: 50%;
+    width: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,8 +42,6 @@
 
 .RdBoard .conatiner .info  h3{
     font-size:38px;
-    
-   
 }
 
 .RdBoard .conatiner .info  p{
@@ -55,6 +53,9 @@
 }
 
 @media all and (max-width:950px) {
+    .RdBoard .conatiner{
+        height: auto;
+    }
     .RdBoard .conatiner,.RdBoard:nth-of-type(odd) .conatiner{
         flex-flow: column nowrap;
         margin: 0 10px;
@@ -64,6 +65,7 @@
     }
 
     .RdBoard .conatiner .info {
+        padding: 20px 0;
         height: 100%;
         width: 100%;
         display: flex;

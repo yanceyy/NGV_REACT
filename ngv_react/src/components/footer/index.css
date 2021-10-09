@@ -41,7 +41,7 @@
     text-decoration:underline;
 }
 
-@media all and (max-width:950px) {
+@media all and (max-width:1400px) {
 
     .footer{
         height: 350px;

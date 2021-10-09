@@ -20,11 +20,13 @@
     justify-content: space-between;
 }
 
+
 .footerForHeader .footer{
     position: fixed;
-    z-index: 999;
+    z-index: 888;
     width: 100%;
-    height: 0;
+    height: 100%;
+    top:0;
     transition: all 0.2s ease;
 }
 /* #root .footer:first-of-type.activate{
@@ -130,9 +132,12 @@
     color: white;
 }
 
-@media all and (max-width:1300px) {
+@media all and (max-width:1400px) {
     .header_nav span{ 
         font-size:13px;
+    }
+    .footerForHeader .footer{
+        top:70px;
     }
 }
 
@@ -141,7 +146,8 @@
         top:70px;
     }
     .header_nav span{ 
-        display:none;
+        visibility:hidden;
+        width:0;
     }
     .header .searchbar{ 
         right: 15px;

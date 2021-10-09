@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages/home';
-import Channel from './pages/channel';
-import WhatsOn from './pages/whats-on';
+import Loading from './pages/loadingpage';
+
+const Channel = lazy(() => import('./pages/channel'));
+const WhatsOn = lazy(() => import('./pages/whats-on'));
+const Tickets = lazy(() => import('./pages/tickets'));
 
 export default function RouterComponent() {
   return (
     <>
-      <Switch>
-        <Route exact path="/"><Home /></Route>
-        <Route path="/channel"><Channel /></Route>
-        <Route path="/whats-on"><WhatsOn /></Route>
-        <Redirect to="/" />
-      </Switch>
+      <Suspense fallback={<Loading />}>
+        <Switch>
+          <Route exact path="/"><Home /></Route>
+          <Route path="/channel"><Channel /></Route>
+          <Route path="/whats-on"><WhatsOn /></Route>
+          <Route path="/tickets"><Tickets /></Route>
+          <Redirect to="/" />
+        </Switch>
+      </Suspense>
     </>
   );
 }

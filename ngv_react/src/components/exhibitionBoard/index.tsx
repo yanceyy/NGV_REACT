@@ -35,7 +35,7 @@ export default function ExhibitionsBoard() {
       <div className="container">
         <div className="title">
           <h2>EXHIBITIONS</h2>
-          <a className="seeAll" href="sall">
+          <a className="seeAll" href="/whats-on">
             <span>
               See all exhibitions
             </span>

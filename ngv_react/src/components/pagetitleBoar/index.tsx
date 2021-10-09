@@ -10,7 +10,7 @@ function PageTitle({ title, text }:Content) {
   return (
     <div className="pagetitle">
       <h1>{title}</h1>
-      <p>{text}</p>
+      {text ? <p>{text}</p> : undefined}
     </div>
   );
 }
