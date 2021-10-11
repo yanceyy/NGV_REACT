@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { render, screen } from '@testing-library/react';
+import { render, screen, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
@@ -28,16 +28,39 @@ const IMGurl = [
 ];
 describe('desktop', () => {
   beforeEach(() => {
-    render(<BrowserRouter><Gallery IMGurl={IMGurl} /></BrowserRouter>);
+    jest.useFakeTimers();
+    act(() => { render(<BrowserRouter><Gallery IMGurl={IMGurl} /></BrowserRouter>); });
   });
-  it('normal render', () => {
-    expect(screen.getByText('VGN Channel')).toBeInTheDocument();
+  // afterEach(() => {
+  //   act(() => {
+  //     jest.runOnlyPendingTimers();
+  //     jest.useRealTimers();
+  //   });
+  // });
+
+  it('test timer', () => {
+    act(() => {
+      jest.advanceTimersByTime(7000); // advance time by 7 seconds
+    });
+    expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).not.toHaveClass('active');
+    expect(screen.getByAltText('French Impressionism virtual tour').parentElement).toHaveClass('active');
+    act(() => {
+      jest.advanceTimersByTime(14000); // advance time by 14 seconds
+    });
+    expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).toHaveClass('active');
+    expect(screen.getByAltText('French Impressionism virtual tour').parentElement).not.toHaveClass('active');
+    jest.useRealTimers();
   });
+
   it('click works', () => {
     expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).toHaveClass('active');
     expect(screen.getByAltText('VGN Channel').parentElement).not.toHaveClass('active');
-    userEvent.click(document.querySelector('.fastchange')?.lastElementChild as TargetElement);
+    act(() => { userEvent.click(document.querySelector('.fastchange')?.lastElementChild as TargetElement); });
     expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).not.toHaveClass('active');
     expect(screen.getByAltText('VGN Channel').parentElement).toHaveClass('active');
+    jest.useRealTimers();
+  });
+  it('normal render', () => {
+    expect(screen.getByText('VGN Channel')).toBeInTheDocument();
   });
 });

@@ -34,6 +34,9 @@ function Tickets() {
       setEndDate(addDays(startDate, 1));
     }
   }, [startDate]);
+  useEffect(() => {
+    query(new Date());
+  }, []);
   useDocumentTitle('Tickets|VGN', false);
   return (
     <div className="tickets">
@@ -45,7 +48,7 @@ function Tickets() {
         </div>
         <div className="notice">
           <div>
-            VGN Members, login to receive discounts on all NGV exhibitions
+            VGN Members, login to receive discounts on all VGN exhibitions
             and programs. Not a member? Join today.
 
           </div>

@@ -12,7 +12,7 @@ interface NavItem extends Base{
 const footerContent:NavItem[] = [
   {
     name: 'tickets',
-    url: '/ticket',
+    url: '/tickets',
     submenu: [
     ],
   },

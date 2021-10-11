@@ -24,7 +24,7 @@ export default function EventBoard({ items }:{items:Item[]}) {
         </div>
         <a href="/" className="events">
           {items.map((item) => (
-            <div>
+            <div key={item.url}>
               <div className="img" style={{ backgroundImage: `url(${item.url})` }} />
               <h4>{item.title}</h4>
               <h5>{item.subtitle}</h5>

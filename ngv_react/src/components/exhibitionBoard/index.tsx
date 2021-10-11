@@ -44,7 +44,7 @@ export default function ExhibitionsBoard() {
         </div>
         <a href="/" className="events">
           {data.map((item) => (
-            <div>
+            <div key={item.url}>
               <div className="img" style={{ backgroundImage: `url(${item.url})` }} />
               <div className="inf">
                 <h4>{item.title}</h4>
