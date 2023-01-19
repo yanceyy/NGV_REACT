@@ -2,14 +2,14 @@ import React from 'react';
 import './index.css';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-interface Item{
+export interface EventItem{
   url:string,
   title:string,
   subtitle:string,
   time:string
 }
 
-export default function EventBoard({ items }:{items:Item[]}) {
+export default function EventBoard({ items }:{items:EventItem[]}) {
   return (
     <div className="eventBoard">
       <div className="container">

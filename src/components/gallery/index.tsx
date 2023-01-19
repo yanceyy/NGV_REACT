@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import './index.css';
 
-interface GalleryImgUrlItem{
+export interface GalleryImgUrlItem{
   url:string,
   title:string,
   text:string,
