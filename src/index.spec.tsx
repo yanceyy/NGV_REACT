@@ -1,7 +1,5 @@
 /* eslint-disable no-undef */
-import {
-  cleanup, render, screen, waitFor,
-} from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import { Router as BrowserRouter, BrowserRouter as Brouter } from 'react-router-dom';
@@ -10,28 +8,27 @@ import Router from './router';
 
 describe('render', () => {
   beforeEach(() => {
-    cleanup();
     render(<Brouter><Router /></Brouter>);
   });
 
-  it('show Logo', () => {
-    expect(screen.getByText('VGN')).toBeInTheDocument();
+  it('show Logo', async () => {
+    await waitFor(() => { expect(screen.getByText('VGN')).toBeInTheDocument(); });
   });
 
-  it('show header', () => {
-    expect(screen.getByText('EN')).toBeInTheDocument();
+  it('show header', async () => {
+    await waitFor(() => { expect(screen.getByText('EN')).toBeInTheDocument(); });
   });
 
-  it('show virtual events', () => {
-    expect(screen.getByText(/Under 5s/i)).toBeInTheDocument();
+  it('show virtual events', async () => {
+    await waitFor(() => { expect(screen.getByText('Under 5s')).toBeInTheDocument(); });
   });
 
-  it('show big weather', () => {
-    expect(screen.getByText(/big weather/i)).toBeInTheDocument();
+  it('show big weatherr', async () => {
+    await waitFor(() => { expect(screen.getByText(/big weather/i)).toBeInTheDocument(); });
   });
 
-  it('show 2021 Annual Appeal (footer)', () => {
-    expect(screen.getByText(/2021 Annual Appeal/i)).toBeInTheDocument();
+  it('show 2021 Annual Appeal (footer)', async () => {
+    await waitFor(() => { expect(screen.getByText(/2021 Annual Appeal/i)).toBeInTheDocument(); });
   });
 });
 

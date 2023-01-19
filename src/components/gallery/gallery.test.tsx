@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
-import { render, screen, act } from '@testing-library/react';
+import {
+  render, screen, act, waitFor,
+} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
@@ -26,30 +28,30 @@ const IMGurl = [
     id: '3',
   },
 ];
+
 describe('desktop', () => {
   beforeEach(() => {
     jest.useFakeTimers();
-    act(() => { render(<BrowserRouter><Gallery IMGurl={IMGurl} /></BrowserRouter>); });
+    render(<BrowserRouter><Gallery IMGurl={IMGurl} /></BrowserRouter>);
   });
-  // afterEach(() => {
-  //   act(() => {
-  //     jest.runOnlyPendingTimers();
-  //     jest.useRealTimers();
-  //   });
-  // });
 
-  it('test timer', () => {
-    act(() => {
-      jest.advanceTimersByTime(7000); // advance time by 7 seconds
-    });
-    expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).not.toHaveClass('active');
-    expect(screen.getByAltText('French Impressionism virtual tour').parentElement).toHaveClass('active');
-    act(() => {
-      jest.advanceTimersByTime(14000); // advance time by 14 seconds
-    });
-    expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).toHaveClass('active');
-    expect(screen.getByAltText('French Impressionism virtual tour').parentElement).not.toHaveClass('active');
+  afterEach(() => {
     jest.useRealTimers();
+  });
+
+  it('test timer', async () => {
+    await waitFor(() => {
+      expect(screen.getByRole('img', { name: /free shipping australia-wide/i }).parentElement).toHaveClass('active');
+      expect(screen.getByRole('img', { name: /french impressionism virtual tour/i }).parentElement).not.toHaveClass('active');
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(7000); // advance time by 14 seconds
+    });
+    await waitFor(() => {
+      expect(screen.getByRole('img', { name: /free shipping australia-wide/i }).parentElement).toHaveClass('active');
+      expect(screen.getByRole('img', { name: /french impressionism virtual tour/i }).parentElement).not.toHaveClass('active');
+    });
   });
 
   it('click works', () => {
@@ -58,8 +60,8 @@ describe('desktop', () => {
     act(() => { userEvent.click(document.querySelector('.fastchange')?.lastElementChild as TargetElement); });
     expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).not.toHaveClass('active');
     expect(screen.getByAltText('VGN Channel').parentElement).toHaveClass('active');
-    jest.useRealTimers();
   });
+
   it('normal render', () => {
     expect(screen.getByText('VGN Channel')).toBeInTheDocument();
   });

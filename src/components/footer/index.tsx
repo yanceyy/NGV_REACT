@@ -9,6 +9,7 @@ interface Base{
 interface NavItem extends Base{
   submenu: Base[]
 }
+
 const footerContent:NavItem[] = [
   {
     name: 'tickets',
