@@ -1,4 +1,3 @@
-// src/setupTests.js
 import { beforeAll, afterEach, afterAll } from '@jest/globals';
 import server from './mocks/server';
 

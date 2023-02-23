@@ -30,11 +30,11 @@
 .eventBoard .container .seeAll{
     display: flex;
     align-items: center;
-    
+
 }
 .eventBoard .container .seeAll .rightarrow{
     transition: all 0.5s ease;
-    
+
  }
 .eventBoard .container .seeAll:hover .rightarrow{
    transform: translateX(5px);
@@ -72,7 +72,7 @@
 
 .eventBoard .events .img{
     margin:10px 0;
-    padding:100% 0 0 0; 
+    padding:100% 0 0 0;
     width: 100%;
     background-repeat: no-repeat;
     background-size:cover;

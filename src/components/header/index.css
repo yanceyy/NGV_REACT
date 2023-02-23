@@ -41,7 +41,7 @@
 /* #root .footer:first-of-type.activate{
     height: 100%;
 } */
-.header .searchbar{ 
+.header .searchbar{
  position: absolute;
  right: 75px;
  border:2px solid rgba(0, 0, 0, 0.2);
@@ -49,10 +49,13 @@
 }
 
 
-.header .rightNgv>span{
+.header .rightNgv>button{
     cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
-.header .searchbar input{ 
+
+.header .searchbar input{
     width: 300px;
     height: 37px;
     border: none;
@@ -62,12 +65,12 @@
     border-right: 2px solid rgba(0, 0, 0, 0.2);
     font-size: 16px;
 }
-.header .searchbar input::placeholder{ 
+.header .searchbar input::placeholder{
    font-size: 16px;
 }
 
 
-.header .searchbar>span{ 
+.header .searchbar>span{
     display: inline-block;
     background-color: #fff;
     width: 37px;
@@ -94,7 +97,7 @@
     text-transform: uppercase;
 }
 
-.header_nav span{ 
+.header_nav span{
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 500;
     cursor: pointer;
@@ -106,7 +109,7 @@
 
 .header_nav span:hover{
     opacity: 0.6;
-    
+
 }
 .rightNgv{
     width: 140px;
@@ -118,7 +121,7 @@
     display:flex;
     align-items: center;
 }
-.languagepanel{ 
+.languagepanel{
     background-color: #262D39;
     display: flex;
     padding: 0 90px;
@@ -126,7 +129,7 @@
     overflow: hidden;
     height: 308px;
 }
-.languagepanel.hiden{ 
+.languagepanel.hiden{
     height: 0px;
 }
 .languagepanel ul {
@@ -142,7 +145,7 @@
 }
 
 @media all and (max-width:1400px) {
-    .header_nav span{ 
+    .header_nav span{
         font-size:13px;
     }
     .footerForHeader .footer{
@@ -154,15 +157,15 @@
     .footerForHeader .footer{
         top:70px;
     }
-    .header_nav span{ 
+    .header_nav span{
         visibility:hidden;
         width:0;
     }
-    .header .searchbar{ 
+    .header .searchbar{
         right: 15px;
        }
 
-       .languagepanel{ 
+       .languagepanel{
         padding: 0 30px;
     }
 }
