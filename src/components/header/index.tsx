@@ -18,64 +18,124 @@ export default function Header() {
   return (
     <header className={`${showMenu ? 'act' : ''} header`}>
       <div className="insider">
-        <Link to="/" className="logo">VGN</Link>
+        <Link to="/" className="logo" aria-label="Home Page">
+          VGN
+        </Link>
         <nav className="header_nav">
-          <span><Link to="/tickets">Tickets</Link></span>
-          <span><Link to="/channel">channel</Link></span>
-          <span><Link to="/whats-on">whats on</Link></span>
-          <span><Link to="/collection">collection</Link></span>
-          <span><Link to="/store">store</Link></span>
-          <span><Link to="/whats-on">shop</Link></span>
-          <span><Link to="/plan-your-visit">play your visit</Link></span>
-          <span><Link to="/membership">join</Link></span>
+          <span>
+            <Link to="/tickets">Tickets</Link>
+          </span>
+          <span>
+            <Link to="/channel">channel</Link>
+          </span>
+          <span>
+            <Link to="/whats-on">whats on</Link>
+          </span>
+          <span>
+            <Link to="/collection">collection</Link>
+          </span>
+          <span>
+            <Link to="/store">store</Link>
+          </span>
+          <span>
+            <Link to="/whats-on">shop</Link>
+          </span>
+          <span>
+            <Link to="/plan-your-visit">play your visit</Link>
+          </span>
+          <span>
+            <Link to="/membership">join</Link>
+          </span>
         </nav>
         <div className="rightNgv">
-          <span className="changelanguage" title="language" onClick={() => { setShowLanguagePanel(!showLanguagePanel); }}>
-            <LanguageIcon />
-            EN
-            {
-              showLanguagePanel ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />
-            }
-          </span>
+          <button
+            type="button"
+            aria-label="Change language"
+            className="changelanguage"
+            title="language"
+            onClick={() => {
+              setShowLanguagePanel(!showLanguagePanel);
+            }}
+          >
+            <span aria-hidden="true">
+              <LanguageIcon />
+              EN
+              {showLanguagePanel ? (
+                <KeyboardArrowUpIcon />
+              ) : (
+                <KeyboardArrowDownIcon />
+              )}
+            </span>
+          </button>
 
-          <span onClick={() => { setShowSearch(!showSearch); }}>
-            {
-              showSearch ? <KeyboardArrowDownIcon /> : <SearchIcon />
-            }
-          </span>
-          <span
-            title="menu"
+          <button
+            type="button"
+            aria-label="Search"
+            onClick={() => {
+              setShowSearch(!showSearch);
+            }}
+          >
+            <span aria-hidden="true">
+              {showSearch ? <KeyboardArrowDownIcon /> : <SearchIcon />}
+            </span>
+          </button>
+          <button
+            type="button"
+            aria-label="Menu"
             onClick={() => {
               setMenu(!showMenu);
             }}
           >
             {showMenu ? <CloseIcon /> : <MenuIcon />}
-
-          </span>
+          </button>
         </div>
       </div>
-      {showSearch
-        ? (
-          <div className="searchbar">
-            <input placeholder="Search" type="input" />
-            <span><SearchIcon /></span>
-          </div>
-        ) : undefined}
-      <div className={showLanguagePanel ? 'languagepanel' : 'languagepanel hiden'}>
+      {showSearch ? (
+        <div className="searchbar">
+          <input placeholder="Search" type="input" />
+          <span>
+            <SearchIcon />
+          </span>
+        </div>
+      ) : undefined}
+      <div
+        className={showLanguagePanel ? 'languagepanel' : 'languagepanel hiden'}
+      >
         <ul>
-          <li><a href="/">العَرَبِيَّة</a></li>
-          <li><a href="/">中文</a></li>
-          <li><a href="/">DEUTSCH</a></li>
-          <li><a href="/">ENGLISH</a></li>
-          <li><a href="/">ESPAÑOL</a></li>
-          <li><a href="/">FRANÇAIS</a></li>
-          <li><a href="/">ITALIANO</a></li>
-          <li><a href="/">日本語</a></li>
+          <li>
+            <a href="/">العَرَبِيَّة</a>
+          </li>
+          <li>
+            <a href="/">中文</a>
+          </li>
+          <li>
+            <a href="/">DEUTSCH</a>
+          </li>
+          <li>
+            <a href="/">ENGLISH</a>
+          </li>
+          <li>
+            <a href="/">ESPAÑOL</a>
+          </li>
+          <li>
+            <a href="/">FRANÇAIS</a>
+          </li>
+          <li>
+            <a href="/">ITALIANO</a>
+          </li>
+          <li>
+            <a href="/">日本語</a>
+          </li>
         </ul>
       </div>
-      {showMenu ? ReactDOM.createPortal(
-        <div className="footerForHeader"><Footer /></div>, document.getElementById('root') as Element,
-      ) : undefined}
+      {showMenu
+        ? ReactDOM.createPortal(
+          <div className="footerForHeader">
+            <Footer />
+          </div>,
+            document.getElementById('root') as Element,
+        )
+        : undefined}
     </header>
   );
 }

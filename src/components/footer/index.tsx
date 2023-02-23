@@ -292,7 +292,7 @@ const footerContent:NavItem[] = [
 ];
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="container">
         {footerContent.map((item) => (
           <div className="item" key={item.url}>
@@ -317,6 +317,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

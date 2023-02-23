@@ -20,7 +20,7 @@
     transition:opacity 1s linear;
 }
 
-.gallery ul.fastchange{ 
+.gallery ul.fastchange{
     position: absolute;
     bottom:30px;
     right: 85px;
@@ -53,9 +53,9 @@
 .gallery div.active .info{
     bottom: 30px;
     transition:bottom 1s ease;
-    
+
 }
-.gallery .info h3{ 
+.gallery .info h3{
     font-size:45px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -78,12 +78,12 @@
         padding:12px;
         max-width:220px;
     }
-    .gallery .info h3{ 
+    .gallery .info h3{
         font-size:22px;
         font-weight: 600;
         margin-bottom: 10px;
     }
-    .gallery ul.fastchange{ 
+    .gallery ul.fastchange{
         bottom:20px;
         right: 35px;
     }
