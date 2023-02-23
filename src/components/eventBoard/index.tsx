@@ -22,16 +22,16 @@ export default function EventBoard({ items }:{items:EventItem[]}) {
             <KeyboardArrowRightIcon className="rightarrow" />
           </a>
         </div>
-        <a href="/" className="events">
+        <div className="events">
           {items.map((item) => (
-            <div key={item.url}>
+            <a href="/" key={item.url}>
               <div className="img" style={{ backgroundImage: `url(${item.url})` }} />
               <h4>{item.title}</h4>
               <h5>{item.subtitle}</h5>
               <p>{item.time}</p>
-            </div>
+            </a>
           ))}
-        </a>
+        </div>
       </div>
     </div>
   );

@@ -1,1 +1,0 @@
-import{j as a,a as i}from"./index-2ec6b039.js";function r({title:s,text:e}){return a("div",{className:"pagetitle",children:[i("h1",{children:s}),e?i("p",{children:e}):void 0]})}r.defaultProps={text:""};export{r as P};
