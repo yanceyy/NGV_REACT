@@ -11,6 +11,17 @@ import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Footer from '../footer';
 
+const LANGUAGE_LINKS = [
+  { key: 'l1', name: 'العَرَبِيَّة' },
+  { key: 'l2', name: '中文' },
+  { key: 'l3', name: 'DEUTSCH' },
+  { key: 'l4', name: 'ENGLISH' },
+  { key: 'l5', name: 'ESPAÑOL' },
+  { key: 'l6', name: 'FRANÇAIS' },
+  { key: 'l7', name: 'ITALIANO' },
+  { key: 'l8', name: '日本語' },
+];
+
 export default function Header() {
   const [showLanguagePanel, setShowLanguagePanel] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
@@ -99,33 +110,17 @@ export default function Header() {
         </div>
       ) : undefined}
       <div
+        aria-hidden={!showLanguagePanel}
         className={showLanguagePanel ? 'languagepanel' : 'languagepanel hiden'}
       >
         <ul>
-          <li>
-            <a href="/">العَرَبِيَّة</a>
-          </li>
-          <li>
-            <a href="/">中文</a>
-          </li>
-          <li>
-            <a href="/">DEUTSCH</a>
-          </li>
-          <li>
-            <a href="/">ENGLISH</a>
-          </li>
-          <li>
-            <a href="/">ESPAÑOL</a>
-          </li>
-          <li>
-            <a href="/">FRANÇAIS</a>
-          </li>
-          <li>
-            <a href="/">ITALIANO</a>
-          </li>
-          <li>
-            <a href="/">日本語</a>
-          </li>
+          {
+            LANGUAGE_LINKS.map((item) => (
+              <li key={item.key}>
+                <a tabIndex={showLanguagePanel ? 0 : -1} href="/">{item.name}</a>
+              </li>
+            ))
+           }
         </ul>
       </div>
       {showMenu
