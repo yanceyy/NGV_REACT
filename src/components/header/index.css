@@ -86,12 +86,14 @@
   letter-spacing: 6px;
   font-weight: 600;
 }
+
 .header_nav {
   flex: 1;
   display: flex;
   margin: 0 5%;
   justify-content: space-between;
   text-transform: uppercase;
+  max-width: 845px;
 }
 
 .header_nav span {
@@ -138,14 +140,14 @@
 
 @media all and (max-width: 1400px) {
   .header_nav span {
-    font-size: 13px;
+    font-size: 16px;
   }
   .footerForHeader .footer {
     top: 70px;
   }
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-width: 1100px) {
   .footerForHeader .footer {
     top: 70px;
   }

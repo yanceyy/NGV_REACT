@@ -37,25 +37,25 @@ export default function Header() {
             <Link to="/tickets">Tickets</Link>
           </span>
           <span>
-            <Link to="/channel">channel</Link>
-          </span>
-          <span>
             <Link to="/whats-on">whats on</Link>
           </span>
           <span>
+            <Link to="/channel">channel</Link>
+          </span>
+          <span>
             <Link to="/collection">collection</Link>
-          </span>
-          <span>
-            <Link to="/store">store</Link>
-          </span>
-          <span>
-            <Link to="/whats-on">shop</Link>
           </span>
           <span>
             <Link to="/plan-your-visit">play your visit</Link>
           </span>
           <span>
             <Link to="/membership">join</Link>
+          </span>
+          <span>
+            <Link to="/whats-on">support</Link>
+          </span>
+          <span>
+            <Link to="/whats-on">shop</Link>
           </span>
         </nav>
         <div className="rightNgv">

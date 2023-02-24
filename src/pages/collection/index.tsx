@@ -17,7 +17,7 @@ filter: blur(2px);
 }
 `;
 function Collection() {
-  useDocumentTitle('Tickets|VGN', false);
+  useDocumentTitle('Collection|VGN', false);
   return (
     <div className="tickets">
       <div className="maximumbody">
