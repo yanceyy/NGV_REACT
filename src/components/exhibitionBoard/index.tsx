@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Link } from 'react-router-dom';
 
 const data = [
   {
@@ -35,25 +36,25 @@ export default function ExhibitionsBoard() {
       <div className="container">
         <div className="title">
           <h2>EXHIBITIONS</h2>
-          <a className="seeAll" href="/whats-on">
+          <Link className="seeAll" to="/whats-on">
             <span>
               See all exhibitions
             </span>
             <KeyboardArrowRightIcon className="rightarrow" />
-          </a>
+          </Link>
         </div>
-        <a href="/" className="events">
+        <div className="events">
           {data.map((item) => (
-            <div key={item.url}>
+            <Link to="/" key={item.url} className="events__item">
               <div className="img" style={{ backgroundImage: `url(${item.url})` }} />
               <div className="inf">
                 <h4>{item.title}</h4>
                 <h5>{item.subtitle}</h5>
                 <p>{item.time}</p>
               </div>
-            </div>
+            </Link>
           ))}
-        </a>
+        </div>
       </div>
     </div>
   );

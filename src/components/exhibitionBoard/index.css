@@ -30,11 +30,11 @@
 .exhibitions .container .seeAll{
     display: flex;
     align-items: center;
-    
+
 }
 .exhibitions .container .seeAll .rightarrow{
     transition: all 0.5s ease;
-    
+
  }
 .exhibitions .container .seeAll:hover .rightarrow{
    transform: translateX(5px);
@@ -45,15 +45,18 @@
     text-transform: uppercase;
     font-weight: 700;
 }
+
 .exhibitions .container .title >a{
     font-size: 18px;
 
 }
+
 .exhibitions .events{
     display: flex;
     flex-wrap: nowrap;
 }
-.exhibitions .events>div{
+
+.exhibitions .events .events__item{
     flex:1;
     margin: 0 10px;
     border: 1px solid rgba(0,0,0,0.1)

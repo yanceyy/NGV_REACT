@@ -45,7 +45,6 @@ export default function Home() {
         <Head />
         <Gallery IMGurl={galleryContents} />
         <div className="homePageContent">
-          {/* <Announement /> */}
           <RdBoard item={content} />
           <EventBoard items={eventItems} />
           <RdBoard item={content1} />

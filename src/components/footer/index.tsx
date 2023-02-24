@@ -300,7 +300,7 @@ export default function Footer() {
             <ul className="subitem">
               {item.submenu.map((subItem) => (
                 <li key={subItem.url}>
-                  <a href={subItem.url}>{subItem.name}</a>
+                  <Link to={subItem.url}>{subItem.name}</Link>
                 </li>
               ))}
             </ul>

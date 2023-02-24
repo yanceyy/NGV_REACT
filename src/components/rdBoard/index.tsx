@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Link } from 'react-router-dom';
 
 interface Content{
   imgUrl:string,
@@ -15,8 +16,7 @@ export default function RdBoard({ item }:{item:Content}) {
     <div className="RdBoard">
       <div className="conatiner">
         <img src={item.imgUrl} alt="" />
-        <a href={item.link} className="info">
-
+        <Link to={item.link} className="info">
           <h3>{item.title}</h3>
           <p>
             {item.content}
@@ -25,8 +25,7 @@ export default function RdBoard({ item }:{item:Content}) {
             {item.linkname}
             <KeyboardArrowRightIcon className="rightarrow" />
           </span>
-
-        </a>
+        </Link>
       </div>
     </div>
   );
