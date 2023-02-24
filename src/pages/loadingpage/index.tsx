@@ -9,7 +9,6 @@ export default function Loading() {
     <>
       <div className="maximumbody">
         <Head />
-
         <div className="homePageContent" />
       </div>
     </>

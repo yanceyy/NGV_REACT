@@ -1,8 +1,8 @@
-.homePageContent>*{
-    margin: 140px 0;
+.homePageContent > * {
+  margin: 140px 0;
 }
-@media all and (max-width:950px) {
-    .homePageContent>*{
-        margin: 40px 0;
-    }
+@media all and (max-width: 950px) {
+  .homePageContent > * {
+    margin: 40px 0;
+  }
 }

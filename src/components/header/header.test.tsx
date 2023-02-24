@@ -11,7 +11,12 @@ describe('desktop', () => {
     const container = document.createElement('div');
     container.setAttribute('id', 'root');
     document.body.append(container);
-    render(<BrowserRouter><Header /></BrowserRouter>, { container });
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>,
+      { container },
+    );
   });
   it('show Logo', () => {
     expect(screen.getByText('VGN')).toBeInTheDocument();

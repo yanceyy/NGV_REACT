@@ -37,9 +37,7 @@ export default function ExhibitionsBoard() {
         <div className="title">
           <h2>EXHIBITIONS</h2>
           <Link className="seeAll" to="/whats-on">
-            <span>
-              See all exhibitions
-            </span>
+            <span>See all exhibitions</span>
             <KeyboardArrowRightIcon className="rightarrow" />
           </Link>
         </div>

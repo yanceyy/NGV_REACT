@@ -61,7 +61,8 @@ const events = [
 const content3 = {
   imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/EXHI061864/1280',
   title: 'NGV SPOTIFY PLAYLISTS',
-  content: 'Wander through the Impressionist movement’s most dreamy, timeless and sublime pieces of music, from iconic early works through to contemporary forms from across the globe.',
+  content:
+    'Wander through the Impressionist movement’s most dreamy, timeless and sublime pieces of music, from iconic early works through to contemporary forms from across the globe.',
   linkname: 'Listen',
   link: '/',
 };
@@ -69,12 +70,13 @@ const content3 = {
 const content4 = {
   imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/EXHI061868/1280',
   title: 'Beyond the Frame',
-  content: 'Understand the bigger picture behind some of the world’s greatest art with Beyond the Frame, a six-part podcast series created by HSBC, Premium Partner of French Impressionism from the Museum of Fine Arts, Boston',
+  content:
+    'Understand the bigger picture behind some of the world’s greatest art with Beyond the Frame, a six-part podcast series created by HSBC, Premium Partner of French Impressionism from the Museum of Fine Arts, Boston',
   linkname: 'Listen',
   link: '/',
 };
 export default function WhatsOn() {
-  useDocumentTitle('What\'s on|VGN', false);
+  useDocumentTitle("What's on|VGN", false);
   return (
     <>
       <div className="maximumbody">

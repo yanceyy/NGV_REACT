@@ -21,7 +21,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "fix:lint": "eslint --fix src/**/*.tsx"
+    "fix:lint": "eslint --fix src"
   },
   "eslintConfig": {
     "extends": [
@@ -69,6 +69,7 @@
     "history": "^5.0.1",
     "msw": "^0.49.3",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
     "typescript": "^4.9.5",
     "vite": "^4.1.4",
     "vite-plugin-eslint": "^1.8.1",

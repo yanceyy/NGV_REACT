@@ -1,5 +1,9 @@
+// eslint-disable-next-line import/no-unresolved
 import { beforeAll, afterEach, afterAll } from '@jest/globals';
-import server from './mocks/server';
+import { setupServer } from 'msw/node';
+import handlers from './mocks/handlers';
+
+const server = setupServer(...handlers);
 
 beforeAll(() => server.listen());
 

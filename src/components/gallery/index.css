@@ -1,90 +1,89 @@
-.gallery{
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 3.15;
-    background-color: gray;
+.gallery {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3.15;
+  background-color: gray;
 }
 
-.gallery img{
-    position:absolute;
-    opacity:0;
-    width: 100%;
-    visibility: hidden;
-    transition:opacity 0.8s linear;
+.gallery img {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  visibility: hidden;
+  transition: opacity 0.8s linear;
 }
 
-.gallery div.active>img{
-    position:relative;
-    visibility:visible;
-    opacity:1;
-    transition:opacity 1s linear;
+.gallery div.active > img {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 
-.gallery ul.fastchange{
-    position: absolute;
-    bottom:30px;
-    right: 85px;
-    display: flex;
+.gallery ul.fastchange {
+  position: absolute;
+  bottom: 30px;
+  right: 85px;
+  display: flex;
 }
 
-.gallery ul.fastchange li{
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    margin: 0 9px;
-    border-radius: 50%;
-    cursor: pointer;
+.gallery ul.fastchange li {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  margin: 0 9px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.gallery ul.fastchange li.active{
-    background-color: #777;
+.gallery ul.fastchange li.active {
+  background-color: #777;
 }
 
-.gallery .info{
-    max-width:470px;
-    background-color: rgba(255, 255, 255, 0.75);
+.gallery .info {
+  max-width: 470px;
+  background-color: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  bottom: -100%;
+  left: 60px;
+  padding: 25px;
+  transition: none;
+}
+
+.gallery div.active .info {
+  bottom: 30px;
+  transition: bottom 1s ease;
+}
+.gallery .info h3 {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 950px) {
+  .gallery {
+    aspect-ratio: auto;
+  }
+  .gallery img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .gallery .info {
     position: absolute;
     bottom: -100%;
-    left:60px;
-    padding:25px;
-    transition:none;
-}
-
-.gallery div.active .info{
-    bottom: 30px;
-    transition:bottom 1s ease;
-
-}
-.gallery .info h3{
-    font-size:45px;
+    left: 30px;
+    padding: 12px;
+    max-width: 220px;
+  }
+  .gallery .info h3 {
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-@media all and (max-width:950px) {
-    .gallery{
-        aspect-ratio: auto;
-    }
-    .gallery img{
-        height:300px;
-        object-fit: cover;
-    }
-
-    .gallery .info{
-        position: absolute;
-        bottom: -100%;
-        left:30px;
-        padding:12px;
-        max-width:220px;
-    }
-    .gallery .info h3{
-        font-size:22px;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-    .gallery ul.fastchange{
-        bottom:20px;
-        right: 35px;
-    }
+    margin-bottom: 10px;
+  }
+  .gallery ul.fastchange {
+    bottom: 20px;
+    right: 35px;
+  }
 }

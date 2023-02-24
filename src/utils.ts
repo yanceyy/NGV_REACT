@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 
-export const useDocumentTitle = (title:string, keepOnUnmount:boolean = true) => {
+export const useDocumentTitle = (title: string, keepOnUnmount: boolean = true) => {
   const oldTitle = useRef(document.title).current;
   useEffect(() => {
     document.title = title;
@@ -12,7 +12,7 @@ export const useDocumentTitle = (title:string, keepOnUnmount:boolean = true) => 
   });
 };
 
-export const useMount = (fuc:Function) => {
+export const useMount = (fuc: Function) => {
   useEffect(() => {
     const ret = fuc();
     return ret;

@@ -1,75 +1,74 @@
-.tickets .dateselector{
-    display: flex;
-    justify-content: space-between;
+.tickets .dateselector {
+  display: flex;
+  justify-content: space-between;
 }
-.tickets .res{
-    min-height: 500px;
+.tickets .res {
+  min-height: 500px;
 }
-.tickets .notice{
-    padding:0 5%;
+.tickets .notice {
+  padding: 0 5%;
 }
-.tickets .notice>*{
-    margin: 20px 0;
+.tickets .notice > * {
+  margin: 20px 0;
 }
-.tickets .logincart{
-    background-color: #EFEFEF;
-    padding:0 5%;
-    background-clip: content-box;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.tickets .logincart> button{
-    width: 85px;
-    background-color:transparent;
-    height: 35px;
-    margin: 0 5px;
-    font-size:18px;
-    color: #888;
-    outline:none;
-    border: 2px solid black;
-    cursor: pointer;
+.tickets .logincart {
+  background-color: #efefef;
+  padding: 0 5%;
+  background-clip: content-box;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.tickets .logincart> button:hover{
-    color: black;
-}
-.tickets .dateselector>span{
-    line-height:50px;
-    align-items: center;
-    font-size: 24px;
-}
-
-
-.tickets .react-datepicker__input-container{
-    position: relative;
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    
+.tickets .logincart > button {
+  width: 85px;
+  background-color: transparent;
+  height: 35px;
+  margin: 0 5px;
+  font-size: 18px;
+  color: #888;
+  outline: none;
+  border: 2px solid black;
+  cursor: pointer;
 }
 
-
-.tickets .dateselector .enddate,.tickets .dateselector .startdate{
-    width: 100%;
-   height:50px;
-   padding: 0 20px;
-   font-size:16px;
-   color: rgba(0, 0, 0, 0.6);
-   cursor: pointer;
+.tickets .logincart > button:hover {
+  color: black;
 }
-.tickets .react-datepicker__input-container::after{
-    font-family: 'Material Icons';
-    content: "event";
-    position: absolute;
-    font-size: 32px;
-    top:10px;
-    right: 10px;
- }
- @media all and (max-width:950px) {
-    .tickets .dateselector .enddate,.tickets .dateselector .startdate{
-       font-size:12px;
-    }
+.tickets .dateselector > span {
+  line-height: 50px;
+  align-items: center;
+  font-size: 24px;
+}
+
+.tickets .react-datepicker__input-container {
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tickets .dateselector .enddate,
+.tickets .dateselector .startdate {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.tickets .react-datepicker__input-container::after {
+  font-family: "Material Icons";
+  content: "event";
+  position: absolute;
+  font-size: 32px;
+  top: 10px;
+  right: 10px;
+}
+@media all and (max-width: 950px) {
+  .tickets .dateselector .enddate,
+  .tickets .dateselector .startdate {
+    font-size: 12px;
+  }
 }

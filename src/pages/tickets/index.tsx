@@ -8,7 +8,7 @@ import { useDocumentTitle } from '../../utils';
 import './index.css';
 import Event from '../../components/eventPhotoName';
 
-const loadingStyle:React.CSSProperties = {
+const loadingStyle: React.CSSProperties = {
   position: 'absolute',
   top: '50%',
   left: '50%',
@@ -19,7 +19,7 @@ function Tickets() {
   const [endDate, setEndDate] = useState(new Date());
   const [events, setEvents] = useState(false);
   const [loading, setLoading] = useState(false);
-  const query = (date:Date) => {
+  const query = (date: Date) => {
     setEndDate(date);
     setLoading(true);
     setEvents(false);
@@ -43,28 +43,56 @@ function Tickets() {
       <div className="maximumbody">
         <Head />
         <div className="logincart">
-          <button type="button" className="login">Login</button>
-          <button type="submit" className="cart">Cart</button>
+          <button type="button" className="login">
+            Login
+          </button>
+          <button type="submit" className="cart">
+            Cart
+          </button>
         </div>
         <div className="notice">
           <div>
-            VGN Members, login to receive discounts on all VGN exhibitions
-            and programs. Not a member? Join today.
-
+            VGN Members, login to receive discounts on all VGN exhibitions and programs. Not a
+            member? Join today.
           </div>
           <div>
-            A $4.50 transaction fee applies for online purchases
-            (excluding free events and donations). Terms and conditions
+            A $4.50 transaction fee applies for online purchases (excluding free events and
+            donations). Terms and conditions
           </div>
         </div>
         <div className="dateselector">
-          <DatePicker className="startdate" selected={startDate} minDate={addDays(new Date(), 1)} maxDate={addDays(new Date(), 30)} onChange={(date:Date) => setStartDate(date)} dateFormat="MMMM d, yyyy" />
+          <DatePicker
+            className="startdate"
+            selected={startDate}
+            minDate={addDays(new Date(), 1)}
+            maxDate={addDays(new Date(), 30)}
+            onChange={(date: Date) => setStartDate(date)}
+            dateFormat="MMMM d, yyyy"
+          />
           <span>to</span>
-          <DatePicker className="enddate" selected={endDate} minDate={addDays(startDate, 1)} maxDate={addDays(new Date(), 30)} onChange={query} dateFormat="MMMM d, yyyy" />
+          <DatePicker
+            className="enddate"
+            selected={endDate}
+            minDate={addDays(startDate, 1)}
+            maxDate={addDays(new Date(), 30)}
+            onChange={query}
+            dateFormat="MMMM d, yyyy"
+          />
         </div>
         <div className="res">
-          {loading ? <div className="loading" style={loadingStyle}> Loading </div> : undefined}
-          {events ? <Event imgurl="https://www.ngv.vic.gov.au/wp-content/uploads/2021/07/Chanel_TNEW.jpg" title="Gabrielle Chanel. Fashion Manifesto" /> : undefined}
+          {loading ? (
+            <div className="loading" style={loadingStyle}>
+              {' '}
+              Loading
+              {' '}
+            </div>
+          ) : undefined}
+          {events ? (
+            <Event
+              imgurl="https://www.ngv.vic.gov.au/wp-content/uploads/2021/07/Chanel_TNEW.jpg"
+              title="Gabrielle Chanel. Fashion Manifesto"
+            />
+          ) : undefined}
         </div>
       </div>
       <Footer />

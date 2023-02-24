@@ -13,11 +13,21 @@ export default function RouterComponent() {
     <>
       <Suspense fallback={<Loading />}>
         <Switch>
-          <Route exact path="/"><Home /></Route>
-          <Route path="/channel"><Channel /></Route>
-          <Route path="/whats-on"><WhatsOn /></Route>
-          <Route path="/tickets"><Tickets /></Route>
-          <Route path="/collection"><Collection /></Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/channel">
+            <Channel />
+          </Route>
+          <Route path="/whats-on">
+            <WhatsOn />
+          </Route>
+          <Route path="/tickets">
+            <Tickets />
+          </Route>
+          <Route path="/collection">
+            <Collection />
+          </Route>
           <Redirect to="/" />
         </Switch>
       </Suspense>

@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.css';
 
-interface Content{
-    title:string,
-    text?:string,
+interface Content {
+  title: string;
+  text: string;
 }
 
-function PageTitle({ title, text }:Content) {
+function PageTitle({ title, text = '' }: Content) {
   return (
     <div className="pagetitle">
       <h1>{title}</h1>
@@ -14,7 +14,5 @@ function PageTitle({ title, text }:Content) {
     </div>
   );
 }
-PageTitle.defaultProps = {
-  text: '',
-};
+
 export default PageTitle;

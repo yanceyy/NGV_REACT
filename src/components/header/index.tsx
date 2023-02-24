@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import './index.css';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -71,11 +70,7 @@ export default function Header() {
             <span aria-hidden="true">
               <LanguageIcon />
               EN
-              {showLanguagePanel ? (
-                <KeyboardArrowUpIcon />
-              ) : (
-                <KeyboardArrowDownIcon />
-              )}
+              {showLanguagePanel ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
             </span>
           </button>
 
@@ -114,13 +109,13 @@ export default function Header() {
         className={showLanguagePanel ? 'languagepanel' : 'languagepanel hiden'}
       >
         <ul>
-          {
-            LANGUAGE_LINKS.map((item) => (
-              <li key={item.key}>
-                <a tabIndex={showLanguagePanel ? 0 : -1} href="/">{item.name}</a>
-              </li>
-            ))
-           }
+          {LANGUAGE_LINKS.map((item) => (
+            <li key={item.key}>
+              <a tabIndex={showLanguagePanel ? 0 : -1} href="/">
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
       {showMenu

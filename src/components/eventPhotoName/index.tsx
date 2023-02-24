@@ -1,7 +1,12 @@
 import React from 'react';
 import './index.css';
 
-function Event({ imgurl, title }:{imgurl:string, title:string}) {
+interface EventProp {
+  imgurl: string;
+  title: string;
+}
+
+function Event({ imgurl, title }: EventProp) {
   return (
     <div className="event">
       <img src={imgurl} alt="" />

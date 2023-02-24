@@ -17,7 +17,8 @@ import type { EventItem } from '../../components/eventBoard';
 const content = {
   imgUrl: 'https://www.ngv.vic.gov.au/wp-content/uploads/2021/09/9x5_channel.jpg',
   title: 'CHANNEL',
-  content: 'Stay connected and inspired with highlights from the WMW including the stories behind our Collection works and exhibitions, virtual tours, essays, interviews and more.',
+  content:
+    'Stay connected and inspired with highlights from the WMW including the stories behind our Collection works and exhibitions, virtual tours, essays, interviews and more.',
   linkname: 'Browse',
   link: '/channel',
 };

@@ -32,7 +32,11 @@ const IMGurl = [
 describe('desktop', () => {
   beforeEach(() => {
     jest.useFakeTimers();
-    render(<BrowserRouter><Gallery IMGurl={IMGurl} /></BrowserRouter>);
+    render(
+      <BrowserRouter>
+        <Gallery IMGurl={IMGurl} />
+      </BrowserRouter>,
+    );
   });
 
   afterEach(() => {
@@ -41,24 +45,36 @@ describe('desktop', () => {
 
   it('test timer', async () => {
     await waitFor(() => {
-      expect(screen.getByRole('img', { name: /free shipping australia-wide/i }).parentElement).toHaveClass('active');
-      expect(screen.getByRole('img', { name: /french impressionism virtual tour/i }).parentElement).not.toHaveClass('active');
+      expect(
+        screen.getByRole('img', { name: /free shipping australia-wide/i }).parentElement,
+      ).toHaveClass('active');
+      expect(
+        screen.getByRole('img', { name: /french impressionism virtual tour/i }).parentElement,
+      ).not.toHaveClass('active');
     });
 
     act(() => {
       jest.advanceTimersByTime(7000); // advance time by 14 seconds
     });
     await waitFor(() => {
-      expect(screen.getByRole('img', { name: /free shipping australia-wide/i }).parentElement).toHaveClass('active');
-      expect(screen.getByRole('img', { name: /french impressionism virtual tour/i }).parentElement).not.toHaveClass('active');
+      expect(
+        screen.getByRole('img', { name: /free shipping australia-wide/i }).parentElement,
+      ).toHaveClass('active');
+      expect(
+        screen.getByRole('img', { name: /french impressionism virtual tour/i }).parentElement,
+      ).not.toHaveClass('active');
     });
   });
 
   it('click works', () => {
     expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).toHaveClass('active');
     expect(screen.getByAltText('VGN Channel').parentElement).not.toHaveClass('active');
-    act(() => { userEvent.click(document.querySelector('.fastchange')?.lastElementChild as TargetElement); });
-    expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).not.toHaveClass('active');
+    act(() => {
+      userEvent.click(document.querySelector('.fastchange')?.lastElementChild as TargetElement);
+    });
+    expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).not.toHaveClass(
+      'active',
+    );
     expect(screen.getByAltText('VGN Channel').parentElement).toHaveClass('active');
   });
 

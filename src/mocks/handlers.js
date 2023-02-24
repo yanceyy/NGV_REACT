@@ -49,14 +49,8 @@ const events = [
 ];
 
 const handlers = [
-  rest.get('/gallery', (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(galleryContents),
-  )),
-  rest.get('/events', (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(events),
-  )),
+  rest.get('/gallery', (req, res, ctx) => res(ctx.status(200), ctx.json(galleryContents))),
+  rest.get('/events', (req, res, ctx) => res(ctx.status(200), ctx.json(events))),
 ];
 
 export default handlers;
