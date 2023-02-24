@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 import LanguageIcon from '@mui/icons-material/Language';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -7,7 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom';
-import ReactDOM from 'react-dom';
+import { createPortal } from 'react-dom';
 import Footer from '../footer';
 
 const LANGUAGE_LINKS = [
@@ -25,6 +25,15 @@ export default function Header() {
   const [showLanguagePanel, setShowLanguagePanel] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [showMenu, setMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (showMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [showMenu]);
+
   return (
     <header className={`${showMenu ? 'act' : ''} header`}>
       <div className="insider">
@@ -119,7 +128,7 @@ export default function Header() {
         </ul>
       </div>
       {showMenu
-        ? ReactDOM.createPortal(
+        ? createPortal(
           <div className="footerForHeader">
             <Footer />
           </div>,

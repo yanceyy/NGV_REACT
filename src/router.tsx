@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/home';
 import Loading from './pages/loadingpage';
 
@@ -12,24 +12,14 @@ export default function RouterComponent() {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/channel">
-            <Channel />
-          </Route>
-          <Route path="/whats-on">
-            <WhatsOn />
-          </Route>
-          <Route path="/tickets">
-            <Tickets />
-          </Route>
-          <Route path="/collection">
-            <Collection />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/channel" element={<Channel />} />
+          <Route path="/whats-on" element={<WhatsOn />} />
+          <Route path="/tickets" element={<Tickets />} />
+          <Route path="/collection" element={<Collection />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </Suspense>
     </>
   );
