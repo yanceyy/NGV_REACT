@@ -20,14 +20,14 @@
   transition: opacity 1s linear;
 }
 
-.gallery ul.fastchange {
+.gallery ul.picture-jump-section {
   position: absolute;
   bottom: 30px;
   right: 85px;
   display: flex;
 }
 
-.gallery ul.fastchange li {
+.gallery ul.picture-jump-section li {
   width: 10px;
   height: 10px;
   background-color: white;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.gallery ul.fastchange li.active {
+.gallery ul.picture-jump-section li.active {
   background-color: #777;
 }
 
@@ -82,7 +82,7 @@
     font-weight: 600;
     margin-bottom: 10px;
   }
-  .gallery ul.fastchange {
+  .gallery ul.picture-jump-section {
     bottom: 20px;
     right: 35px;
   }

@@ -1,5 +1,6 @@
-import React, { ReactElement, useState, useEffect } from 'react';
 import './index.css';
+
+import React, { ReactElement, useEffect, useState } from 'react';
 
 export interface GalleryImgUrlItem {
   url: string;
@@ -13,11 +14,11 @@ interface GalleryImgUrlItems {
 }
 
 export default function Gallery({ IMGurl }: GalleryImgUrlItems): ReactElement {
-  const [picIndex, setpicIndex] = useState<number>(0);
+  const [pictureIndex, setPictureIndex] = useState<number>(0);
 
   useEffect(() => {
     const t = setInterval(() => {
-      setpicIndex((x) => {
+      setPictureIndex((x) => {
         if (x + 1 >= IMGurl.length) {
           return 0;
         }
@@ -27,14 +28,19 @@ export default function Gallery({ IMGurl }: GalleryImgUrlItems): ReactElement {
     return () => {
       clearInterval(t);
     };
-  }, [picIndex]);
-  const fastChangePic = (e: React.MouseEvent<HTMLLIElement>): void => {
-    setpicIndex(parseInt(e.currentTarget.dataset.index!, 10));
+  }, [pictureIndex]);
+
+  const jumpToPicture = (e: React.MouseEvent<HTMLLIElement>): void => {
+    setPictureIndex(parseInt(e.currentTarget.dataset.index!, 10));
   };
+
   return (
     <section className="gallery">
       {IMGurl.map((url, index) => (
-        <div key={url.id} className={index === picIndex ? 'active' : undefined}>
+        <div
+          key={url.id}
+          className={index === pictureIndex ? 'active' : undefined}
+        >
           <img alt={url.title} src={url.url} />
           <div className="info">
             <h3>{url.title}</h3>
@@ -42,13 +48,13 @@ export default function Gallery({ IMGurl }: GalleryImgUrlItems): ReactElement {
           </div>
         </div>
       ))}
-      <ul className="fastchange">
+      <ul className="picture-jump-section">
         {IMGurl.map((url, index) => (
           <li
             key={url.id}
             data-index={index}
-            className={index === picIndex ? 'active' : undefined}
-            onClick={fastChangePic}
+            className={index === pictureIndex ? 'active' : undefined}
+            onClick={jumpToPicture}
           />
         ))}
       </ul>

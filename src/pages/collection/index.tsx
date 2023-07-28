@@ -1,11 +1,11 @@
-import React from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
+
 import styled from '@emotion/styled';
-import Head from '../../components/header';
 import Footer from '../../components/footer';
-import { useDocumentTitle } from '../../utils';
+import Head from '../../components/header';
 import Masonry from '../../components/MasonryLayout';
 import PageTitle from '../../components/pagetitleBoar';
+import { useDocumentTitle } from '../../utils';
 
 const HeaderImg = styled.img`
   height: 500px;
@@ -20,7 +20,7 @@ function Collection() {
   useDocumentTitle('Collection|VGN', false);
   return (
     <div className="tickets">
-      <div className="maximumbody">
+      <div className="maximum-body">
         <Head />
         <HeaderImg src="https://content.ngv.vic.gov.au/col-images/api/Cd101054/1920" />
         <PageTitle

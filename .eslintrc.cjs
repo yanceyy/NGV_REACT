@@ -3,43 +3,41 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
+    jest: true,
   },
-  extends: ["plugin:react/recommended", "airbnb"],
-  parser: "@typescript-eslint/parser",
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    "react/jsx-filename-extension": [
+    indent: 'off',
+    'prettier/prettier': 'error',
+    'comma-dangle': 'off',
+    'object-curly-newline': 'off',
+    'react/jsx-filename-extension': [
       1,
-      { extensions: [".ts", ".tsx", ".js", ".jsx"] },
+      { extensions: ['.ts', '.tsx', '.js', '.jsx'] },
     ],
-    "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "import/no-extraneous-dependencies": [
-      "off",
-      { devDependencies: ["**/*.test.tsx", "**/*.spec.tsx"] },
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'import/no-extraneous-dependencies': [
+      'off',
+      { devDependencies: ['**/*.test.tsx', '**/*.spec.tsx'] },
     ],
-    "import/prefer-default-export": "off",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        js: "never",
-        jsx: "never",
-        ts: "never",
-        tsx: "never",
-        css: "never",
-      },
-    ],
+    'import/prefer-default-export': 'off',
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
     },
   },

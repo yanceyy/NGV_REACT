@@ -1,4 +1,4 @@
-.RdBoard .conatiner {
+.RdBoard .container {
   height: 446px;
   max-width: 1360px;
   margin: 0 auto 20px;
@@ -7,29 +7,29 @@
   flex-flow: row nowrap;
 }
 
-.RdBoard:nth-of-type(odd) .conatiner {
+.RdBoard:nth-of-type(odd) .container {
   flex-flow: row-reverse nowrap;
 }
 
-.RdBoard .conatiner img {
+.RdBoard .container img {
   width: 50%;
 }
 
-.RdBoard .conatiner span {
+.RdBoard .container span {
   display: flex;
   align-items: center;
   font-weight: 600;
 }
 
-.RdBoard .conatiner .info .rightarrow {
+.RdBoard .container .info .right-arrow {
   transition: all 0.5s ease;
 }
 
-.RdBoard .conatiner .info:hover .rightarrow {
+.RdBoard .container .info:hover .right-arrow {
   transform: translateX(3px);
 }
 
-.RdBoard .conatiner .info {
+.RdBoard .container .info {
   height: 100%;
   width: 50%;
   display: flex;
@@ -38,11 +38,11 @@
   flex-direction: column;
 }
 
-.RdBoard .conatiner .info h3 {
+.RdBoard .container .info h3 {
   font-size: 38px;
 }
 
-.RdBoard .conatiner .info p {
+.RdBoard .container .info p {
   width: 50%;
   text-align: center;
   line-height: 24px;
@@ -51,19 +51,19 @@
 }
 
 @media all and (max-width: 950px) {
-  .RdBoard .conatiner {
+  .RdBoard .container {
     height: auto;
   }
-  .RdBoard .conatiner,
-  .RdBoard:nth-of-type(odd) .conatiner {
+  .RdBoard .container,
+  .RdBoard:nth-of-type(odd) .container {
     flex-flow: column nowrap;
     margin: 0 10px;
   }
-  .RdBoard .conatiner img {
+  .RdBoard .container img {
     width: 100%;
   }
 
-  .RdBoard .conatiner .info {
+  .RdBoard .container .info {
     padding: 20px 0;
     height: 100%;
     width: 100%;
@@ -73,10 +73,10 @@
     flex-direction: column;
   }
 
-  .RdBoard .conatiner .info h3 {
+  .RdBoard .container .info h3 {
     font-size: 28px;
   }
-  .RdBoard .conatiner .info p {
+  .RdBoard .container .info p {
     width: 90%;
     text-align: center;
     line-height: 24px;

@@ -9,9 +9,11 @@
   align-items: center;
   margin: 0 10px;
 }
+
 .eventBoard .container h4 {
   font-weight: 700;
 }
+
 .eventBoard .container h4,
 .eventBoard .container h5 {
   font-size: 18px;
@@ -23,6 +25,7 @@
   margin: 5px 0;
   transition: all 0.5s ease;
 }
+
 .eventBoard .events div:hover p {
   transform: translateY(5px);
 }
@@ -31,10 +34,12 @@
   display: flex;
   align-items: center;
 }
-.eventBoard .container .seeAll .rightarrow {
+
+.eventBoard .container .seeAll .right-arrow {
   transition: all 0.5s ease;
 }
-.eventBoard .container .seeAll:hover .rightarrow {
+
+.eventBoard .container .seeAll:hover .right-arrow {
   transform: translateX(5px);
 }
 
@@ -43,9 +48,11 @@
   text-transform: uppercase;
   font-weight: 700;
 }
+
 .eventBoard .container .title > a {
   font-size: 18px;
 }
+
 .eventBoard .events {
   display: flex;
   flex-wrap: wrap;

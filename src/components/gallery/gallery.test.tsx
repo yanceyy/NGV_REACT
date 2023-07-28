@@ -1,11 +1,9 @@
-/* eslint-disable no-undef */
-import {
-  render, screen, act, waitFor,
-} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React from 'react';
+
+import { act, render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
 import { BrowserRouter } from 'react-router-dom';
-import userEvent, { TargetElement } from '@testing-library/user-event';
 import Gallery from '.';
 
 const IMGurl = [
@@ -35,7 +33,7 @@ describe('desktop', () => {
     render(
       <BrowserRouter>
         <Gallery IMGurl={IMGurl} />
-      </BrowserRouter>,
+      </BrowserRouter>
     );
   });
 
@@ -46,36 +44,52 @@ describe('desktop', () => {
   it('test timer', async () => {
     await waitFor(() => {
       expect(
-        screen.getByRole('img', { name: /free shipping australia-wide/i }).parentElement,
+        screen.getByRole('img', { name: /free shipping australia-wide/i })
+          .parentElement
       ).toHaveClass('active');
       expect(
-        screen.getByRole('img', { name: /french impressionism virtual tour/i }).parentElement,
+        screen.getByRole('img', { name: /french impressionism virtual tour/i })
+          .parentElement
       ).not.toHaveClass('active');
     });
 
     act(() => {
-      jest.advanceTimersByTime(7000); // advance time by 14 seconds
+      jest.advanceTimersByTime(8000); // advance time by 14 seconds
     });
+
     await waitFor(() => {
       expect(
-        screen.getByRole('img', { name: /free shipping australia-wide/i }).parentElement,
-      ).toHaveClass('active');
-      expect(
-        screen.getByRole('img', { name: /french impressionism virtual tour/i }).parentElement,
+        screen.getByRole('img', { name: /free shipping australia-wide/i })
+          .parentElement
       ).not.toHaveClass('active');
+      expect(
+        screen.getByRole('img', { name: /french impressionism virtual tour/i })
+          .parentElement
+      ).toHaveClass('active');
     });
   });
 
-  it('click works', () => {
-    expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).toHaveClass('active');
-    expect(screen.getByAltText('VGN Channel').parentElement).not.toHaveClass('active');
-    act(() => {
-      userEvent.click(document.querySelector('.fastchange')?.lastElementChild as TargetElement);
-    });
-    expect(screen.getByAltText('FREE SHIPPING australia-wide').parentElement).not.toHaveClass(
-      'active',
+  it('click works', async () => {
+    expect(
+      screen.getByAltText('FREE SHIPPING australia-wide').parentElement
+    ).toHaveClass('active');
+    expect(screen.getByAltText('VGN Channel').parentElement).not.toHaveClass(
+      'active'
     );
-    expect(screen.getByAltText('VGN Channel').parentElement).toHaveClass('active');
+    act(() => {
+      userEvent.click(
+        document.querySelector('.picture-jump-section')
+          ?.lastElementChild as Element
+      );
+    });
+    await waitFor(() => {
+      expect(
+        screen.getByAltText('FREE SHIPPING australia-wide').parentElement
+      ).not.toHaveClass('active');
+      expect(screen.getByAltText('VGN Channel').parentElement).toHaveClass(
+        'active'
+      );
+    });
   });
 
   it('normal render', () => {

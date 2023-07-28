@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from '../../components/header';
-import Footer from '../../components/footer';
-import { useDocumentTitle } from '../../utils';
 import './index.css';
+
+import Footer from '../../components/footer';
+import Head from '../../components/header';
 import PageTitle from '../../components/pagetitleBoar';
 import RdBoard from '../../components/rdBoard';
+import { useDocumentTitle } from '../../utils';
 
 const content = {
   title: 'CHANNEL',
@@ -20,7 +20,7 @@ const content1 = {
   title: 'French Impressionism Virtual Tour',
   content:
     'Explore French Impressionism from the Museum of Fine Arts, Boston online, access our audio guide, videos and more.',
-  linkname: 'Take the tour',
+  linkName: 'Take the tour',
   link: '/',
 };
 
@@ -29,7 +29,7 @@ const content3 = {
   title: 'NGV SPOTIFY PLAYLISTS',
   content:
     'Wander through the Impressionist movement’s most dreamy, timeless and sublime pieces of music, from iconic early works through to contemporary forms from across the globe.',
-  linkname: 'Listen',
+  linkName: 'Listen',
   link: '/',
 };
 
@@ -38,18 +38,18 @@ const content4 = {
   title: 'Beyond the Frame',
   content:
     'Understand the bigger picture behind some of the world’s greatest art with Beyond the Frame, a six-part podcast series created by HSBC, Premium Partner of French Impressionism from the Museum of Fine Arts, Boston',
-  linkname: 'Listen',
+  linkName: 'Listen',
   link: '/',
 };
 export default function Channel() {
   useDocumentTitle('Channel|VGN', false);
   return (
     <>
-      <div className="maximumbody">
+      <div className="maximum-body">
         <Head />
         <PageTitle title={content.title} text={content.text} />
         <RdBoard item={content1} />
-        <PageTitle title={content2.title} />
+        <PageTitle title={content2.title} text={undefined} />
         <RdBoard item={content3} />
         <RdBoard item={content4} />
         <div className="homePageContent" />

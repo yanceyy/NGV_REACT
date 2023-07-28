@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 
 const MasonryItemContainer = styled.div`
@@ -22,9 +21,7 @@ function MasonryItem(props: {
   item: { imgUrl: string; name: string; year: string; content: string };
 }) {
   const { item } = props;
-  const {
-    imgUrl, name, year, content,
-  } = item;
+  const { imgUrl, name, year, content } = item;
   return (
     <MasonryItemContainer>
       <img src={imgUrl} alt="" />

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import MasonryItem from '../MasonryLayoutItem';
 
@@ -7,31 +6,36 @@ const data = [
     imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/Df107137/large',
     name: 'Sally Morgan',
     year: '(1987)',
-    content: 'from The bicentennial folio: prints by twenty-five Australian artists 1988',
+    content:
+      'from The bicentennial folio: prints by twenty-five Australian artists 1988',
   },
   {
     imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/Fe102865/large',
     name: 'Sally Morgan',
     year: '(1987)',
-    content: 'from The bicentennial folio: prints by twenty-five Australian artists 1988',
+    content:
+      'from The bicentennial folio: prints by twenty-five Australian artists 1988',
   },
   {
     imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/Ed000018/large',
     name: 'Sally Morgan',
     year: '(1987)',
-    content: 'from The bicentennial folio: prints by twenty-five Australian artists 1988',
+    content:
+      'from The bicentennial folio: prints by twenty-five Australian artists 1988',
   },
   {
     imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/Fe102939/large',
     name: 'Sally Morgan',
     year: '(1987)',
-    content: 'from The bicentennial folio: prints by twenty-five Australian artists 1988',
+    content:
+      'from The bicentennial folio: prints by twenty-five Australian artists 1988',
   },
   {
     imgUrl: 'https://content.ngv.vic.gov.au/col-images/api/De108882/large',
     name: 'Sally Morgan',
     year: '(1987)',
-    content: 'from The bicentennial folio: prints by twenty-five Australian artists 1988',
+    content:
+      'from The bicentennial folio: prints by twenty-five Australian artists 1988',
   },
 ];
 

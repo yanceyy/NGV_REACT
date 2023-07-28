@@ -1,13 +1,13 @@
-.pagetitle {
+.page-title {
   text-align: center;
   padding: 100px 0;
 }
 
-.pagetitle > h1 {
+.page-title > h1 {
   font-size: 50px;
 }
 
-.pagetitle > p {
+.page-title > p {
   font-size: 21px;
   width: 50%;
   margin: 30px auto;

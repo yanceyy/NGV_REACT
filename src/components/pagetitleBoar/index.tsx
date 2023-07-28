@@ -1,14 +1,13 @@
-import React from 'react';
 import './index.css';
 
 interface Content {
   title: string;
-  text: string;
+  text: string | undefined;
 }
 
-function PageTitle({ title, text = '' }: Content) {
+function PageTitle({ title, text }: Content) {
   return (
-    <div className="pagetitle">
+    <div className="page-title">
       <h1>{title}</h1>
       {text ? <p>{text}</p> : undefined}
     </div>

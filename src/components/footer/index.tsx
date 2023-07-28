@@ -1,5 +1,5 @@
-import React from 'react';
 import './index.css';
+
 import { Link } from 'react-router-dom';
 
 interface Base {
@@ -280,11 +280,11 @@ const footerContent: NavItem[] = [
       },
       {
         name: 'subscribe to eNews',
-        url: '/subscribr',
+        url: '/subscribe',
       },
       {
-        name: 'mamage your enews subscription',
-        url: '/mamage',
+        name: 'manage your news subscription',
+        url: '/manage',
       },
     ],
   },

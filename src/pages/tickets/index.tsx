@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { addDays } from 'date-fns';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Head from '../../components/header';
-import Footer from '../../components/footer';
-import { useDocumentTitle } from '../../utils';
 import './index.css';
+
+import React, { useEffect, useState } from 'react';
+
+import DatePicker from 'react-datepicker';
+import { addDays } from 'date-fns';
 import Event from '../../components/eventPhotoName';
+import Footer from '../../components/footer';
+import Head from '../../components/header';
+import { useDocumentTitle } from '../../utils';
 
 const loadingStyle: React.CSSProperties = {
   position: 'absolute',
@@ -40,7 +42,7 @@ function Tickets() {
   useDocumentTitle('Tickets|VGN', false);
   return (
     <div className="tickets">
-      <div className="maximumbody">
+      <div className="maximum-body">
         <Head />
         <div className="logincart">
           <button type="button" className="login">
@@ -52,12 +54,12 @@ function Tickets() {
         </div>
         <div className="notice">
           <div>
-            VGN Members, login to receive discounts on all VGN exhibitions and programs. Not a
-            member? Join today.
+            VGN Members, login to receive discounts on all VGN exhibitions and
+            programs. Not a member? Join today.
           </div>
           <div>
-            A $4.50 transaction fee applies for online purchases (excluding free events and
-            donations). Terms and conditions
+            A $4.50 transaction fee applies for online purchases (excluding free
+            events and donations). Terms and conditions
           </div>
         </div>
         <div className="dateselector">
@@ -82,14 +84,12 @@ function Tickets() {
         <div className="res">
           {loading ? (
             <div className="loading" style={loadingStyle}>
-              {' '}
               Loading
-              {' '}
             </div>
           ) : undefined}
           {events ? (
             <Event
-              imgurl="https://www.ngv.vic.gov.au/wp-content/uploads/2021/07/Chanel_TNEW.jpg"
+              imgUrl="https://www.ngv.vic.gov.au/wp-content/uploads/2021/07/Chanel_TNEW.jpg"
               title="Gabrielle Chanel. Fashion Manifesto"
             />
           ) : undefined}

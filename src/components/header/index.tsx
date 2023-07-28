@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
 import './index.css';
-import LanguageIcon from '@mui/icons-material/Language';
+
+import { useEffect, useState } from 'react';
+
+import CloseIcon from '@mui/icons-material/Close';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import SearchIcon from '@mui/icons-material/Search';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import LanguageIcon from '@mui/icons-material/Language';
 import { Link } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
 import { createPortal } from 'react-dom';
 import Footer from '../footer';
 
@@ -79,7 +81,11 @@ export default function Header() {
             <span aria-hidden="true">
               <LanguageIcon />
               EN
-              {showLanguagePanel ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+              {showLanguagePanel ? (
+                <KeyboardArrowUpIcon />
+              ) : (
+                <KeyboardArrowDownIcon />
+              )}
             </span>
           </button>
 
@@ -129,11 +135,11 @@ export default function Header() {
       </div>
       {showMenu
         ? createPortal(
-          <div className="footerForHeader">
-            <Footer />
-          </div>,
-            document.getElementById('root') as Element,
-        )
+            <div className="footerForHeader">
+              <Footer />
+            </div>,
+            document.getElementById('root') as Element
+          )
         : undefined}
     </header>
   );

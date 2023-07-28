@@ -1,15 +1,14 @@
-import React from 'react';
 import './index.css';
 
 interface EventProp {
-  imgurl: string;
+  imgUrl: string;
   title: string;
 }
 
-function Event({ imgurl, title }: EventProp) {
+function Event({ imgUrl, title }: EventProp) {
   return (
     <div className="event">
-      <img src={imgurl} alt="" />
+      <img src={imgUrl} alt="" />
       <h5>{title}</h5>
     </div>
   );
